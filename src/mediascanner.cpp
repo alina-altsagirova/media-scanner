@@ -10,7 +10,9 @@ int MediaScanner::run(char *argv1, char *argv2, char *argv3) {
         return std::isdigit(static_cast<unsigned char>(c));
     });
     if(!is_numeric) return 1;
-    media_path = argv3;
+    if(std::filesystem::is_directory(argv3)) media_path = argv3;
+    else return 1;
+
 
     int value = std::stoi(argv1);
     if (value == 1) return 1;
@@ -90,8 +92,8 @@ int main(int argc, char *argv[]) {
       return 1;
     }
   } else {
-    std::cerr << "Error. Please enter timer arguments and path. \nArguments format: "
-                 "{number} {unit} {path}. \nExample: 3 s ~, 100 ms ~/Documents, 5 m ~, 1 d ~, 1 w ~. \n";
+    std::cerr << "Error. Please enter correct arguments. \nArguments format: "
+                 "[number] [unit] [path]. \nExample: 3 s ~, 100 ms ~/Documents, 5 m ~, 1 d ~, 1 w ~. \n";
   }
   return 0;
 }
