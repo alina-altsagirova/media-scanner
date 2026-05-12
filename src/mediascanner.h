@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MEDIASCUNNER_H
+#define MEDIASCUNNER_H
 
 #include "httplib.h"
 #include <chrono>
