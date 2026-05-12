@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-// #define CPPHTTPLIB_OPENSSL_SUPPORT
 #include "httplib.h"
 #include <chrono>
 #include <cstdlib>
