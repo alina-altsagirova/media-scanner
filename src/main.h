@@ -11,17 +11,20 @@
 #include <nlohmann/json.hpp>
 #include <string>
 #include <thread>
+#include <algorithm>
+#include <string_view>
 
 class MediaScanner {
 public:
-  int run(char *argv1, char *argv2);
+  int run(char *argv1, char *argv2, char* argv3);
 
 private:
   httplib::Server srv;
   nlohmann::json report;
-  int scan_main_dir();
-  void save_report_local(nlohmann::json &report, std::string home_path);
-  // void send_report(nlohmann::json &report);
+  std::string media_path;
+  std::mutex report_mutex;
+  int scan_dir();
+  void save_report_local(nlohmann::json &report);
 };
 
 #endif
