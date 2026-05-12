@@ -15,7 +15,6 @@ int MediaScanner::run(char *argv1, char *argv2, char *argv3) {
 
 
     int value = std::stoi(argv1);
-    if (value == 1) return 1;
     std::string unit = argv2;
     if (unit == "s")
       timer_dur = std::chrono::seconds(value);
