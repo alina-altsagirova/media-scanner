@@ -4,7 +4,7 @@ TARGET=media-scanner
 
 .PHONY:all clear rebuild
 
-SRC=src/*.cpp
+SRC=src/*.cpp 
 OBJ=$(SRC:.cpp=.o)
 
 all: $(TARGET)

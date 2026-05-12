@@ -1,7 +1,7 @@
 #ifndef MEDIASCANNER_H
 #define MEDIASCANNER_H
 
-#include "httplib.h"
+#include "../third_party/httplib.h"
 #include <chrono>
 #include <cstdlib>
 #include <filesystem>
