@@ -1,4 +1,4 @@
-#include "mediascunner.h"
+#include "mediascanner.h"
 
 int MediaScanner::run(char *argv1, char *argv2, char *argv3) {
   using namespace std::chrono_literals;

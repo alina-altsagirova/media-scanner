@@ -1,5 +1,5 @@
-#ifndef MEDIASCUNNER_H
-#define MEDIASCUNNER_H
+#ifndef MEDIASCANNER_H
+#define MEDIASCANNER_H
 
 #include "httplib.h"
 #include <chrono>
